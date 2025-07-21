@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #282c34;
+            color: #61dafb;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        .timer-container{
+            background-color: #3a3f47;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            max-width: 700px;
+            width: 90%;
+            box-sizing: border-box;
+        }
+        .current-date{
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #f8f8f2;
+        }
+        .countdown{
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .time-unit{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .time-unit span{
+            font-size: 4em;
+            font-weight: bold;
+            padding: 10px 20px;
+            background-color: #212429;
+            border-radius: 8px;
+            min-width: 100px;
+            display: inline-block;
+            box-sizing: border-box;
+        }
+        .time-unit .label{
+            font-size: 0.9em;
+            margin-top: 10px;
+            color: #abb2bf;
+            text-transform: uppercase;
+        }
+        #image{
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            display: block;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        @media (max-width: 768px){
+            .timer-container{
+                padding: 30px;
+                max-width: 95%;
+            }
+            .countdown{
+                gap: 20px;
+            }
+            .time-unit span{
+                font-size: 3.5em;
+                min-width: 90px;
+                padding: 8px 15px;
+            }
+            .time-unit .label{
+                font-size: 0.8em;
+            }
+        }
+        @media (max-width: 600px) {
+            #image{
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+            .timer-container{
+                padding: 25px;
+            }
+            .current-date{
+                font-size: 1em;
+                margin-bottom: 15px;
+            }
+            .countdown{
+                gap: 15px;
+            }
+            .time-unit span{
+                font-size: 2.8em;
+                min-width: 75px;
+                padding: 6px 12px;
+            }
+            .time-unit .label{
+                font-size: 0.75em;
+            }
+        }
+        @media (max-width: 400px) {
+            .timer-container{
+                padding: 20px;
+            }
+            .countdown{
+                gap: 10px;
+            }
+            .time-unit span{
+                font-size: 2em;
+                min-width: 60px;
+                padding: 5px 10px;
+            }
+            .time-unit .label{
+                font-size: 0.65em;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+<img src="Screenshot 2025-07-21 124021.png" alt="" id="image">
+    <div class="timer-container">
+        <div class="current-date" id="current-date"></div>
+        <div class="countdown">
+            <div class="time-unit">
+                <span id="days">00</span>
+                <div class="label">Days</div>
+            </div>
+            <div class="time-unit">
+                <span id="hours">00</span>
+                <div class="label">Hours</div>
+            </div>
+            <div class="time-unit">
+                <span id="minutes">00</span>
+                <div class="label">Minutes</div>
+            </div>
+            <div class="time-unit">
+                <span id="seconds">00</span>
+                <div class="label">Seconds</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
